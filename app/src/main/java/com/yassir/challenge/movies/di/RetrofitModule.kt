@@ -3,7 +3,7 @@ package com.yassir.challenge.movies.di
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import com.yassir.challenge.movies.BuildConfig
-import com.yassir.challenge.movies.datasources.retrofit.ApiDataSource
+import com.yassir.challenge.movies.data.datasources.retrofit.ApiDataSource
 import com.yassir.challenge.movies.tools.Constant
 import com.yassir.challenge.movies.tools.Constant.API_KEY
 import com.yassir.challenge.movies.tools.Constant.KEY

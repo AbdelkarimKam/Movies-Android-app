@@ -1,7 +1,7 @@
-package com.yassir.challenge.movies.datasources.retrofit
+package com.yassir.challenge.movies.data.datasources.retrofit
 
-import com.yassir.challenge.movies.datasources.retrofit.models.MovieDetailsResponse
-import com.yassir.challenge.movies.datasources.retrofit.models.MoviesResponse
+import com.yassir.challenge.movies.data.datasources.retrofit.models.MovieDetailsResponse
+import com.yassir.challenge.movies.data.datasources.retrofit.models.MoviesResponse
 import com.yassir.challenge.movies.tools.Constant.MOVIE
 import com.yassir.challenge.movies.tools.Constant.MOVIES
 import retrofit2.http.GET

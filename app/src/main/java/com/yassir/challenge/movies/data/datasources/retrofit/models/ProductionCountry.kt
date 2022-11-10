@@ -1,4 +1,4 @@
-package com.yassir.challenge.movies.datasources.retrofit.models
+package com.yassir.challenge.movies.data.datasources.retrofit.models
 
 import com.google.gson.annotations.SerializedName
 

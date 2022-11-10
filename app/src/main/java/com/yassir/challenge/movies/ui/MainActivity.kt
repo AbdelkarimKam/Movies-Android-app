@@ -1,8 +1,11 @@
-package com.yassir.challenge.movies
+package com.yassir.challenge.movies.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.yassir.challenge.movies.R
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

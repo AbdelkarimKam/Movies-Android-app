@@ -83,7 +83,7 @@ object RetrofitModule {
 
     @Singleton
     @Provides
-    fun provideApiCountries(retrofitBuilder: Retrofit.Builder): ApiDataSource {
+    fun provideApiMovies(retrofitBuilder: Retrofit.Builder): ApiDataSource {
         return retrofitBuilder
             .build()
             .create(ApiDataSource::class.java)

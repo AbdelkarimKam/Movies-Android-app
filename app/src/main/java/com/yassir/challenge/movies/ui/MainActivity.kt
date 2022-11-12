@@ -1,14 +1,18 @@
 package com.yassir.challenge.movies.ui
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.yassir.challenge.movies.R
+import androidx.appcompat.app.AppCompatActivity
+import com.yassir.challenge.movies.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var activityMainBinding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        activityMainBinding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(activityMainBinding.root)
     }
 }

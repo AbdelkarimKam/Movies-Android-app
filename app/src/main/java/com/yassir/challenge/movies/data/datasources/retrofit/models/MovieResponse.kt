@@ -19,6 +19,7 @@ data class MovieResponse(
     @Expose
     val originalTitle: String,
     @SerializedName("overview")
+    @Expose
     val overview: String,
     @SerializedName("popularity")
     val popularity: Double,
@@ -29,6 +30,7 @@ data class MovieResponse(
     @Expose
     val releaseDate: String,
     @SerializedName("title")
+    @Expose
     val title: String,
     @SerializedName("video")
     val video: Boolean,

@@ -20,36 +20,39 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center"
-            android:textSize="18sp"
             android:text="@{movie.title}"
+            android:textSize="18sp"
             android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:text="I am a movie" />
 
         <ImageView
             android:id="@+id/poster_path"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/image_height"
             android:layout_gravity="center"
-            android:layout_marginTop="@dimen/movie_list_spacing"
+            android:layout_margin="@dimen/movie_list_spacing"
             android:adjustViewBounds="true"
-            android:scaleType="centerCrop"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:scaleType="fitCenter"
+            app:imageUrl="@{movie.posterPath}"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/title"
-            app:movieId="@{movie.id}"
-            app:imageUrl="@{movie.posterPath}"/>
+            tools:src="@tools:sample/backgrounds/scenic" />
 
         <TextView
-            android:id="@+id/vote_average"
+            android:id="@+id/overview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="@{movie.voteAverage.toString()}"
             android:layout_marginTop="@dimen/movie_list_spacing"
             android:gravity="center"
+            android:text="@{movie.overview.toString()}"
             android:textSize="14sp"
             android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/poster_path"
             tools:text="I am a movie" />

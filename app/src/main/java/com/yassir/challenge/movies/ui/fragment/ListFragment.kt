@@ -29,17 +29,18 @@ class ListFragment : BaseFragment<MoviesLayoutBinding>(MoviesLayoutBinding::infl
         val movieAdapter = MovieAdapter()
         binding.bindAdapter(movieAdapter = movieAdapter)
 
-        lifecycleScope.launchWhenStarted {
-            mainViewModel.pagingMovieFlow.collectLatest {
-                movieAdapter.submitData(it)
+        with(viewLifecycleOwner.lifecycleScope) {
+            this.launchWhenStarted {
+                mainViewModel.pagingMovieFlow.collectLatest {
+                    movieAdapter.submitData(it)
+                }
             }
-        }
-
-        viewLifecycleOwner.lifecycleScope.launch {
-            repeatOnLifecycle(Lifecycle.State.STARTED) {
-                movieAdapter.loadStateFlow.collect {
-                    binding.prependProgress.isVisible = it.source.prepend is LoadState.Loading
-                    binding.appendProgress.isVisible = it.source.append is LoadState.Loading
+            this.launch {
+                repeatOnLifecycle(Lifecycle.State.STARTED) {
+                    movieAdapter.loadStateFlow.collectLatest {
+                        binding.prependProgress.isVisible = it.source.prepend is LoadState.Loading
+                        binding.appendProgress.isVisible = it.source.append is LoadState.Loading
+                    }
                 }
             }
         }

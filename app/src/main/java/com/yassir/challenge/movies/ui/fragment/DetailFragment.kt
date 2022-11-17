@@ -18,7 +18,7 @@ class DetailFragment : BaseFragment<MovieDetailsLayoutBinding>(MovieDetailsLayou
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        lifecycleScope.launchWhenStarted {
+        viewLifecycleOwner.lifecycleScope.launchWhenStarted {
             mainViewModel.movieState.collectLatest {
                 when (it.status) {
                     Status.SUCCESS -> {

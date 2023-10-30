@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="movie_list_spacing">15dp</dimen>
+    <dimen name="image_height">400dp</dimen>
+    <dimen name="image_list_height">300dp</dimen>
+</resources>
